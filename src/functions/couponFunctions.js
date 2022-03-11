@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const createCouponFunc = async (couponDetails) => {
     try {
-        const res = await axios.post(`http://localhost:8000/api/coupon`, couponDetails);
+        const res = await axios.post(`https://couponvalidaator.herokuapp.com/api/coupon`, couponDetails);
         return res.data;
     }
     catch (err) {
@@ -13,7 +13,7 @@ export const createCouponFunc = async (couponDetails) => {
 
 export const getCoupons = async () => {
     try {
-        const res = await axios.get(`http://localhost:8000/api/coupon`);
+        const res = await axios.get(`https://couponvalidaator.herokuapp.com/api/coupon`);
         return res.data;
     }
     catch (err) {
@@ -23,7 +23,7 @@ export const getCoupons = async () => {
 
 export const applyCoupon = async (cartAmount, couponCode) => {
     try {
-        const res = await axios.post(`http://localhost:8000/api/applyCoupon`, { cartAmount, couponName: couponCode })
+        const res = await axios.post(`https://couponvalidaator.herokuapp.com/api/applyCoupon`, { cartAmount, couponName: couponCode })
         return res.data;
     } catch (err) {
         return err.response.data;
