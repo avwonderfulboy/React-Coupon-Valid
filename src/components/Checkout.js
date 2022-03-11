@@ -34,6 +34,7 @@ export default function Checkout() {
                     <label>Cart Amount</label>
                     <input
                         type="number"
+                        min = "0"
                         className="form-control"
                         id="minAmt"
                         placeholder="Enter Cart Amount"
